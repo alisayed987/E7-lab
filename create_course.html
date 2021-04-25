@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Course</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <style>
+        input,textarea,small{
+            display: block;
+            margin: 20px;
+        }
+        .row{
+            margin: 20px;
+            border: solid 3px cadetblue;
+            border-radius: 10px;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div style="text-align: center;"><h1>Courses</h1></div>
+        <div class="row">
+            <h2>APIs:</h2>
+            <p>
+                
+            </p>
+        </div>
+        <div class="row">
+            <div>post(save):</div>
+            <form method="POST" action="http://localhost:3000/api/courses/CreateCourse">
+                <input class="form-control" type="text" name="name" id="Name" placeholder="Name">
+                <small class="form-text text-muted">Name: of minimum length 5</small>
+                <input class="form-control" type="text" name="code" id="put" placeholder="Code">
+                <small class="form-text text-muted">Code: Enter 3 letters then 3 numbers</small>
+                <textarea class="form-control" name="description" id="a1" cols="30" rows="4"></textarea>
+                <input type="submit" value="save">
+            </form>
+        </div>
+        <div class="row">
+            <div>put(update):</div>
+            <form method="POST" action="http://localhost:3000/api/courses/UpdateCourse">
+                <input class="form-control" type="text" name="id" id="id" placeholder="id">
+                <input class="form-control" type="text" name="name" id="Name" placeholder="Name">
+                <small class="form-text text-muted">Name: of minimum length 5</small>
+                <input class="form-control" type="text" name="code" id="put" placeholder="Code">
+                <small class="form-text text-muted">Code: Enter 3 letters then 3 numbers</small>
+                <textarea class="form-control" name="description" id="a1" cols="30" rows="4"></textarea>
+                <input type="submit" value="update">
+            </form>
+        </div>
+        <div class="row">
+            <div>delete:</div>
+            <form method="POST" action="http://localhost:3000/api/courses/DeleteCourse">
+                <input class="form-control" type="text" name="id" id="id" placeholder="id">
+                <input type="submit" value="delete">
+            </form>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
