@@ -20,6 +20,9 @@ app.use(bodyParser.json());
 app.use('/api/courses',courses);
 app.use('/api/students',students);
 app.use('/web',fs);
+app.get('/', function(req, res) {
+    res.sendFile(path.join(__dirname + '/index.html'));
+});
 
 const port = process.env.PORT || 3000 ;
 app.listen(port,()=>console.log(`listining to port ${port}`))    
