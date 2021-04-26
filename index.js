@@ -21,7 +21,7 @@ app.use('/api/courses',courses);
 app.use('/api/students',students);
 app.use('/web',fs);
 app.get('/', function(req, res) {
-    res.sendFile(path.join(__dirname + '/index.html'));
+    res.sendFile(path.join(__dirname + '/fs_Bouns.html'));
 });
 
 const port = process.env.PORT || 3000 ;
