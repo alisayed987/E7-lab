@@ -26,6 +26,12 @@
     <div class="container">
         <div style="text-align: center;"><h1>Courses</h1></div>
         <div class="row">
+            <div class="col-3"> Pages:</div>
+            <div class="col-3"> <a href="./fs_Bouns.html">File System</a></div>
+            <div class="col-3"> <a href="./create_student.html">Students Page</a></div>
+            <div class="col-3"> <a href="./create_course.html">Courses Page</a></div>
+        </div>
+        <div class="row">
             <h2>APIs:</h2>
             <ol>
                 <li> /api/courses   ---> get all courses</li>
@@ -36,7 +42,7 @@
         </div>
         <div class="row">
             <div>post(save):</div>
-            <form method="POST" action="http://localhost:3000/api/courses/CreateCourse">
+            <form method="POST" action="/api/courses/CreateCourse">
                 <input class="form-control" type="text" name="name" id="Name" placeholder="Name">
                 <small class="form-text text-muted">Name: of minimum length 5</small>
                 <input class="form-control" type="text" name="code" id="put" placeholder="Code">
@@ -47,7 +53,7 @@
         </div>
         <div class="row">
             <div>put(update):</div>
-            <form method="POST" action="http://localhost:3000/api/courses/UpdateCourse">
+            <form method="POST" action="/api/courses/UpdateCourse">
                 <input class="form-control" type="text" name="id" id="id" placeholder="id">
                 <input class="form-control" type="text" name="name" id="Name" placeholder="Name">
                 <small class="form-text text-muted">Name: of minimum length 5</small>
@@ -59,7 +65,7 @@
         </div>
         <div class="row">
             <div>delete:</div>
-            <form method="POST" action="http://localhost:3000/api/courses/DeleteCourse">
+            <form method="POST" action="/api/courses/DeleteCourse">
                 <input class="form-control" type="text" name="id" id="id" placeholder="id">
                 <input type="submit" value="delete">
             </form>

@@ -28,6 +28,12 @@
     <div class="container">
         <div style="text-align: center;"><h1>Students</h1></div>
         <div class="row">
+            <div class="col-3"> Pages:</div>
+            <div class="col-3"> <a href="./fs_Bouns.html">File System</a></div>
+            <div class="col-3"> <a href="./create_student.html">Students Page</a></div>
+            <div class="col-3"> <a href="./create_course.html">Courses Page</a></div>
+        </div>
+        <div class="row">
             <h2>APIs:</h2>
             <ol>
                 <li> /api/students   ---> get all students</li>
@@ -38,7 +44,7 @@
         </div>
         <div class="row">
             <div>Post(save):</div>
-            <form method="POST" action="http://localhost:3000/api/students/CreateStudent">
+            <form method="POST" action="/students/CreateStudent">
                 
          
                 <input class="form-control" type="text" name="name" id="Name" placeholder="Name">
@@ -51,7 +57,7 @@
         
         <div class="row">
             <div>put(update):</div>
-            <form method="POST" action="http://localhost:3000/api/students/UpdateStudent">
+            <form method="POST" action="/api/students/UpdateStudent">
                 
                 <input class="form-control" type="text" name="id" id="id" placeholder="id">
                 <input class="form-control" type="text" name="name" id="Name" placeholder="Name">
@@ -63,7 +69,7 @@
         </div>
         <div class="row">
             <div>delete:</div>
-            <form method="POST" action="http://localhost:3000/api/students/DeleteStudent">
+            <form method="POST" action="/api/students/DeleteStudent">
                 <input class="form-control" type="text" name="id" id="id" placeholder="id">
                 <input type="submit" value="delete">
             </form>
