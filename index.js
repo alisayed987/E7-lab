@@ -5,9 +5,11 @@ const Joi = require('joi');
 const courses = require('./routes/courses');
 const students = require('./routes/students');
 const fs = require('./routes/fs');
+const htmls = require('./htmls');
 var bodyParser = require('body-parser');
 require('dotenv').config();
-const path = require('path');
+
+const port = process.env.PORT || 3000 ;
 const DB = process.env.DB_CONN ;
 
 mongoose.connect(DB,{useNewUrlParser: true,useUnifiedTopology: true})
@@ -20,9 +22,7 @@ app.use(bodyParser.json());
 app.use('/api/courses',courses);
 app.use('/api/students',students);
 app.use('/web',fs);
-app.get('/', function(req, res) {
-    res.sendFile(path.join(__dirname + '/fs_Bouns.html'));
-});
+app.use('/',htmls);
 
-const port = process.env.PORT || 3000 ;
+
 app.listen(port,()=>console.log(`listining to port ${port}`))    
