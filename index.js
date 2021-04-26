@@ -7,7 +7,7 @@ const students = require('./routes/students');
 const fs = require('./routes/fs');
 var bodyParser = require('body-parser');
 require('dotenv').config();
-
+const path = require('path');
 const DB = process.env.DB_CONN ;
 
 mongoose.connect(DB,{useNewUrlParser: true,useUnifiedTopology: true})
