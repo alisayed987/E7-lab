@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File System</title>
+    <style>
+        input,textarea,small{
+            display: block;
+            margin: 20px;
+        }
+        .row{
+            margin: 20px;
+            border: solid 3px cadetblue;
+            border-radius: 10px;
+            padding: 20px;
+        }
+        small{
+            display: block;
+        }
+        ol{
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <h2>APIs:</h2>
+            <ol>
+                <li> /web/sourceCode ------------------------------------------> get all contents in the directory</li>
+                <li> /web/sourceCode/?file={fileName.extension}    ---------> open file contents(code)</li>
+                <li> /web/sourceCode/?dir={folderName}     -------------------> shows folder contents</li>
+            </ol>
+        </div>
+    </div>
+</body>
+</html>

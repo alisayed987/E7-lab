@@ -18,6 +18,9 @@
             border-radius: 10px;
             padding: 20px;
         }
+        small{
+            display: block;
+        }
     </style>
 </head>
 
@@ -26,9 +29,12 @@
         <div style="text-align: center;"><h1>Students</h1></div>
         <div class="row">
             <h2>APIs:</h2>
-            <p>
-                
-            </p>
+            <ol>
+                <li> /api/students   ---> get all students</li>
+                <li> /api/students/CreateStudent     ---> create new student</li>
+                <li> /api/students/UpdateStudent     ---> update existing student using objectID</li>
+                <li> /api/students/DeleteStudent     ---> delete student using objectID</li>
+            </ol>
         </div>
         <div class="row">
             <div>Post(save):</div>

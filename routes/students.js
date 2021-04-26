@@ -31,7 +31,7 @@ router.get('/:id',async (req, res) => {
 //----------------save student--------------------------------------
 router.post('/CreateStudent', async(req, res) => {
     const val_result = joiValidation(req.body);
-    console.log(val_result);
+    // console.log(val_result);
     if (val_result.error) {
        return res.status(400).send(val_result.error.details[0].message);
     

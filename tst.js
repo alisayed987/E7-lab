@@ -1,17 +1,9 @@
-const Joi = require('joi');
+const fs = require('fs');
 
-const str="'''aaa'_-'''";
+fs.readdir('./',(err,files)=>{
+console.log(files);
+});
 
-var patt ='^([a-zA-Z]*\'*-*)*$';
-//const jo =Joi.string().pattern(new RegExp('^\'*-*[a-zA-Z]*\'*-*[a-zA-Z]*$'));
-const jo =Joi.string().pattern(new RegExp(patt));
-
-var result = jo.validate(str);
-// console.log(result);
-
-if(result.error){
-    console.log('yes error');
-}
-else{
-    console.log('no error');
-}
+fs.readFile('./tst.js','utf8',(err,data)=>{
+    console.log(data)
+})
